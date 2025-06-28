@@ -1,0 +1,123 @@
+.register{
+    padding-top: 10%;
+    padding-bottom: 5%;
+
+}
+
+.bg-indigo-600{
+    background-color: #007BFF;
+}
+.text-indigo-600{
+    color: #007BFF;
+}
+.apiImg, .secImg{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+.apicontainer{
+    height: 100%;
+}
+.m-4 {
+    margin: 0;
+    border-radius: 0;
+}
+
+
+.contenedor {
+      display: flex;
+      gap: 20%;
+          align-items: center;
+    }
+
+    .coliseo {
+      position: relative;
+      width: 600px;
+      height: 600px;
+    }
+
+    .escenario {
+      position: absolute;
+      top: 50%;
+      left: 51.5%;
+      transform: translate(-50%, -50%);
+      background: #0f38aa;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      z-index: 2;
+    }
+
+    .silla {
+      width: 16px;
+      height: 16px;
+      background-color: #ccc;
+      position: absolute;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .silla.seleccionada {
+      background-color: #21bceb;
+    }
+
+    .silla.ocupada {
+      background-color: #021641;
+      cursor: not-allowed;
+    }
+
+    .panel {
+      width: 280px;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .panel h1 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .panel p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .lista-sillas {
+      font-size: 14px;
+      max-height: 320px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+
+    .lista-sillas div {
+      padding: 4px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .total {
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
+    .boton {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .boton:hover {
+      background: #1b7ed6;
+    }
