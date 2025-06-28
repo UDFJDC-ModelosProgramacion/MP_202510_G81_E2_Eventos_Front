@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="resources/logo.png" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EntradaYa</title>
+
+</head>
+
+<body>
+
+
+  <div class="bg-white">
+    <header class="absolute inset-x-0 top-0 z-50" x-data="{ menuAbierto: false }">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">EntradaYa</span>
+            <img class="h-8 w-auto" src="resources/Recurso 2.png" alt="Logo" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          
+          <button @click="menuAbierto = true" type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Abrir menú principal</span>
+            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#" class="text-sm font-semibold text-gray-900">Inicio</a>
+          <a href="#" class="text-sm font-semibold text-gray-900">Quienes Somos</a>
+          <a href="#" class="text-sm font-semibold text-gray-900">Buscar Eventos</a>
+          <a href="#" class="text-sm font-semibold text-gray-900">Contáctanos</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm font-semibold text-gray-900">Ingresar <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </nav>
+
+      <!-- Menú móvil -->
+      <div x-show="menuAbierto" class="lg:hidden" x-transition>
+        <div class="fixed inset-0 z-50">
+          <!-- Fondo oscuro -->
+          <div class="fixed inset-0 bg-black/30" @click="menuAbierto = false"></div>
+
+          <!-- Panel deslizante -->
+          <div class="fixed inset-y-0 right-0 w-full sm:max-w-sm bg-white p-6 overflow-y-auto">
+            <div class="flex items-center justify-between">
+              <img class="h-8 w-auto" src="resources/Recurso 2.png" alt="Logo">
+              <!-- Botón de cerrar -->
+              <button @click="menuAbierto = false" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Opciones del menú -->
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-200">
+                <div class="space-y-2 py-6">
+                  <a href="#" class="block px-3 py-2 rounded-lg font-semibold text-gray-900 hover:bg-gray-50">Inicio</a>
+                  <a href="#" class="block px-3 py-2 rounded-lg font-semibold text-gray-900 hover:bg-gray-50">Quienes
+                    Somos</a>
+                  <a href="#" class="block px-3 py-2 rounded-lg font-semibold text-gray-900 hover:bg-gray-50">Buscar
+                    Eventos</a>
+                  <a href="#"
+                    class="block px-3 py-2 rounded-lg font-semibold text-gray-900 hover:bg-gray-50">Contáctanos</a>
+                </div>
+                <div class="py-6">
+                  <a href="#"
+                    class="block px-3 py-2.5 rounded-lg font-semibold text-gray-900 hover:bg-gray-50">Ingresar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="relative isolate px-6 pt-14 lg:px-8 register">
+      
+      <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+          <img class="mx-auto h-10 w-auto" src="resources/logo.png" alt="Your Company" />
+          <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Crea tu cuenta</h2>
+        </div>
+
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <!--<form class="space-y-6" action="#" method="POST"> -->
+            <form id="registerForm" class="space-y-6">
+
+            <div>
+              <label for="email" class="block text-sm/6 font-medium text-gray-900">Nombre</label>
+              <div class="mt-2">
+                <input type="text" name="nombre" id="nombre" autocomplete="nombre" required
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm/6 font-medium text-gray-900">Apellido</label>
+              <div class="mt-2">
+                <input type="text" name="apellido" id="apellido" autocomplete="apellido" required
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm/6 font-medium text-gray-900">Correo electrónico</label>
+              <div class="mt-2">
+                <input type="email" name="email" id="email" autocomplete="email" required
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm/6 font-medium text-gray-900">Fecha de Nacimiento</label>
+              <div class="mt-2">
+                <input type="date" name="nacimiento" id="nacimiento" autocomplete="nacimiento" required
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm/6 font-medium text-gray-900">Numero de Telefono</label>
+              <div class="mt-2">
+                <input type="tel" name="numero" id="numero" autocomplete="numero" required
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm/6 font-medium text-gray-900">Contraseña</label>
+              <div class="mt-2">
+                <input type="password" name="password" id="password" autocomplete="password" required
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+              </div>
+            </div>
+
+
+
+            <div>
+              <button type="submit"
+                class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Registrarme</button>
+            </div>
+          </form>
+
+          <p class="mt-10 text-center text-sm/6 text-gray-500">
+            ¿Ya tienes una cuenta?
+            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500">Inicia sesión</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <footer class="bg-white rounded-lg shadow-sm dark:bg-gray-900 m-4">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+            <img src="resources/Recurso 1.png" class="h-8" alt="Flowbite Logo" />
+          </a>
+          <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6">Acerca de</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6">Politica de privacidad</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6">Registrate</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">Contactanos</a>
+            </li>
+          </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href=""
+            class="hover:underline">EntradaYa</a>. Todos los derechos reservados.</span>
+      </div>
+    </footer>
+
+
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>
