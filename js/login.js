@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('loggedAssistant', JSON.stringify(assistant));
 
       // Redirigir a la página del usuario
-      window.location.href = 'user.html';
+      window.location.href = 'user/user.html';
 
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
