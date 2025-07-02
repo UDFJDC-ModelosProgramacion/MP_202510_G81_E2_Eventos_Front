@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="../resources/logo.png" />
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EntradaYa</title>
+
+</head>
+
+<body class="min-h-screen">
+
+    <div class="flex min-h-screen">
+        <aside
+            class="flex flex-col w-64  px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
+
+            <div class="flex items-center justify-between">
+                <a href="#" class="flex items-center ml-4">
+                    <img class="object-cover rounded-full h-8 w-8"
+                        src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                        alt="avatar" />
+                    <span class="ml-2 font-medium text-gray-800 dark:text-gray-200">David Aldana</span>
+                    <!-- Este será reemplazado por el script -->
+                </a>
+                <a href="#">
+                    <img class="w-auto h-6 sm:h-7" src="../resources/logoB.png" alt="">
+                </a>
+            </div>
+
+
+
+
+
+
+            <div class="flex flex-col justify-between flex-1 mt-6">
+                <nav>
+                    <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                        href="dashboard.html">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6"></path>
+                        </svg>
+                        <span class="mx-4 font-medium">Inicio</span>
+                    </a>
+
+                    <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                        href="organizers.html">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5V4H2v16h5m10-4l-4-4-4 4m4-4v12"></path>
+                        </svg>
+                        <span class="mx-4 font-medium">Administrar: Organizadores</span>
+                    </a>
+
+                    <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                        href="events.html">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2V7H3v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <span class="mx-4 font-medium">Administrar: Eventos</span>
+                    </a>
+
+                    <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                        href="locations.html">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 12.414m0 0L8.343 7.343m5.071 5.071L16 12M4.222 4.222a1 1 0 011.415 0l12.728 12.728a1 1 0 01-1.414 1.414L4.222 5.636a1 1 0 010-1.414z">
+                            </path>
+                        </svg>
+                        <span class="mx-4 font-medium">Administrar: Locaciones</span>
+                    </a>
+
+                    <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                        href="promocodes.html">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 14l6-6m2 2l-6 6m5 4a2 2 0 110-4 2 2 0 010 4zm-12 0a2 2 0 110-4 2 2 0 010 4zm2-12a2 2 0 110-4 2 2 0 010 4zm10 0a2 2 0 110-4 2 2 0 010 4z">
+                            </path>
+                        </svg>
+                        <span class="mx-4 font-medium">Administrar: Códigos promocionales</span>
+                    </a>
+
+                    <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                        href="notifications.html">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                            </path>
+                        </svg>
+                        <span class="mx-4 font-medium">Enviar Notificaciones</span>
+                    </a>
+
+
+                    <hr class="my-6 border-gray-200 dark:border-gray-600" />
+
+
+
+                    <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                        href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1" />
+                        </svg>
+
+
+                        <span class="mx-4 font-medium">Cerrar Sesion</span>
+                    </a>
+                </nav>
+
+
+            </div>
+        </aside>
+
+        <div class="flex flex-col flex-1 bg-gray-50 dark:bg-gray-900">
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <footer class="bg-white rounded-lg shadow-sm dark:bg-gray-900 m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="../resources/Recurso 1.png" class="h-8" alt="Flowbite Logo" />
+                </a>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Acerca de</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Politica de privacidad</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Registrate</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href=""
+                    class="hover:underline">EntradaYa</a>. Todos los derechos reservados.</span>
+        </div>
+    </footer>
+
+    <script src="../js/sessionManager.js"></script>
+    <script src="../js/logout.js"></script>
+    <!-- Incluir el script al final del body -->
+    <script src="../js/userHeader.js"></script>
+
+
+</body>
+
+</html>
