@@ -1,0 +1,45 @@
+@media (max-width: 640px) {
+      .cart-item-grid {
+        display: block;
+      }
+    }
+    
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity 0.3s;
+    }
+    .fade-enter, .fade-leave-to {
+      opacity: 0;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    
+    /* Responsive table */
+    @media (max-width: 768px) {
+      .responsive-table {
+        overflow-x: auto;
+      }
+    }
+
+    .category-overlay {
+          transition: all 0.3s ease;
+        }
+
+        .category-overlay:hover {
+          transform: scale(1.05);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
