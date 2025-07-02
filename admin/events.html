@@ -252,16 +252,17 @@
                         </div>
                         <div class="overflow-x-auto">
                             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-  <tr>
-    <th scope="col" class="p-4">Nombre</th>
-    <th scope="col" class="p-4">Categoría</th>
-    <th scope="col" class="p-4">Fecha</th>
-    <th scope="col" class="p-4">Locación</th>
-    <th scope="col" class="p-4">Organizador</th>
-    <th scope="col" class="p-4">Acciones</th>
-  </tr>
-</thead>
+                                <thead
+                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" class="p-4">Nombre</th>
+                                        <th scope="col" class="p-4">Categoría</th>
+                                        <th scope="col" class="p-4">Fecha</th>
+                                        <th scope="col" class="p-4">Locación</th>
+                                        <th scope="col" class="p-4">Organizador</th>
+                                        <th scope="col" class="p-4">Acciones</th>
+                                    </tr>
+                                </thead>
 
 
 
@@ -301,46 +302,53 @@
 
                         <!-- Modal body -->
                         <form id="form-evento">
-  <div class="grid gap-4 mb-4 sm:grid-cols-2">
-    <div>
-      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
-      <input type="text" name="name" id="name" required placeholder="Nombre del evento"
-        class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-    </div>
+                            <div class="grid gap-4 mb-4 sm:grid-cols-2">
+                                <div>
+                                    <label for="name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+                                    <input type="text" name="name" id="name" required placeholder="Nombre del evento"
+                                        class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                                </div>
 
-    <div>
-      <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categoría</label>
-      <input type="text" name="category" id="category" required placeholder="Ej: Concierto, Teatro..."
-        class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-    </div>
+                                <div>
+                                    <label for="category"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categoría</label>
+                                    <input type="text" name="category" id="category" required
+                                        placeholder="Ej: Concierto, Teatro..."
+                                        class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                                </div>
 
-    <div>
-      <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha</label>
-      <input type="datetime-local" name="date" id="date" required
-        class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-    </div>
+                                <div>
+                                    <label for="date"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha</label>
+                                    <input type="datetime-local" name="date" id="date" required
+                                        class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                                </div>
 
-    <div>
-      <label for="locationId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Locación</label>
-      <select name="locationId" id="locationId" required
-        class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"></select>
-    </div>
+                                <div>
+                                    <label for="locationId"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Locación</label>
+                                    <select name="locationId" id="locationId" required
+                                        class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"></select>
+                                </div>
 
-    <div>
-      <label for="organizerId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Organizador</label>
-      <select name="organizerId" id="organizerId" required
-        class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"></select>
-    </div>
-  </div>
+                                <div>
+                                    <label for="organizerId"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Organizador</label>
+                                    <select name="organizerId" id="organizerId" required
+                                        class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"></select>
+                                </div>
+                            </div>
 
-  <div class="items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-    <button type="submit" id="guardarBtn"
-      class="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5">Guardar Evento</button>
+                            <div class="items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                                <button type="submit" id="guardarBtn"
+                                    class="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5">Guardar
+                                    Evento</button>
 
-    <button type="reset"
-      class="w-full sm:w-auto text-white bg-gray-500 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5">Limpiar</button>
-  </div>
-</form>
+                                <button type="reset"
+                                    class="w-full sm:w-auto text-white bg-gray-500 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5">Limpiar</button>
+                            </div>
+                        </form>
 
 
 

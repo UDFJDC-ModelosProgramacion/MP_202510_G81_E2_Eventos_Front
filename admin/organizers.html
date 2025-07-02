@@ -252,16 +252,17 @@
                         </div>
                         <div class="overflow-x-auto">
                             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-  <tr>
-    <th scope="col" class="p-4">Nombre</th>
-    <th scope="col" class="p-4">Apellido</th>
-    <th scope="col" class="p-4">Email</th>
-    <th scope="col" class="p-4">Teléfono</th>
-    <th scope="col" class="p-4">Dirección</th>
-    <th scope="col" class="p-4">Acciones</th>
-  </tr>
-</thead>
+                                <thead
+                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" class="p-4">Nombre</th>
+                                        <th scope="col" class="p-4">Apellido</th>
+                                        <th scope="col" class="p-4">Email</th>
+                                        <th scope="col" class="p-4">Teléfono</th>
+                                        <th scope="col" class="p-4">Dirección</th>
+                                        <th scope="col" class="p-4">Acciones</th>
+                                    </tr>
+                                </thead>
 
                                 <tbody id="tabla-organizadores"></tbody>
 
@@ -299,55 +300,68 @@
 
                         <!-- Modal body -->
                         <form id="form-organizador">
-  <div class="grid gap-4 mb-4 sm:grid-cols-2">
-    <div>
-      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
-      <input type="text" name="name" id="name" placeholder="Nombre del organizador" required
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
-    </div>
-    <div>
-      <label for="lastName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellido</label>
-      <input type="text" name="lastName" id="lastName" placeholder="Apellido del organizador" required
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
-    </div>
-    <div>
-      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-      <input type="email" name="email" id="email" placeholder="Correo electrónico" required
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
-    </div>
-    <div>
-      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contraseña</label>
-      <input type="password" name="password" id="password" placeholder="********" required
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
-    </div>
-    <div>
-      <label for="numberPhone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Teléfono</label>
-      <input type="number" name="numberPhone" id="numberPhone" placeholder="Ej: 3012345678" required
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
-    </div>
-    <div>
-      <label for="birthDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha de nacimiento</label>
-      <input type="date" name="birthDate" id="birthDate" required
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
-    </div>
-    <div>
-      <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
-      <input type="text" name="address" id="address" placeholder="Ej: Calle 123 #45-67" required
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
-    </div>
-  </div>
+                            <div class="grid gap-4 mb-4 sm:grid-cols-2">
+                                <div>
+                                    <label for="name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+                                    <input type="text" name="name" id="name" placeholder="Nombre del organizador"
+                                        required
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
+                                </div>
+                                <div>
+                                    <label for="lastName"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellido</label>
+                                    <input type="text" name="lastName" id="lastName"
+                                        placeholder="Apellido del organizador" required
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
+                                </div>
+                                <div>
+                                    <label for="email"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                                    <input type="email" name="email" id="email" placeholder="Correo electrónico"
+                                        required
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
+                                </div>
+                                <div>
+                                    <label for="password"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contraseña</label>
+                                    <input type="password" name="password" id="password" placeholder="********" required
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
+                                </div>
+                                <div>
+                                    <label for="numberPhone"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Teléfono</label>
+                                    <input type="number" name="numberPhone" id="numberPhone"
+                                        placeholder="Ej: 3012345678" required
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
+                                </div>
+                                <div>
+                                    <label for="birthDate"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha de
+                                        nacimiento</label>
+                                    <input type="date" name="birthDate" id="birthDate" required
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
+                                </div>
+                                <div>
+                                    <label for="address"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
+                                    <input type="text" name="address" id="address" placeholder="Ej: Calle 123 #45-67"
+                                        required
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" />
+                                </div>
+                            </div>
 
-  <div class="items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-    <button type="submit" id="guardarOrganizadorBtn"
-      class="w-full sm:w-auto text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-      Guardar Organizador
-    </button>
-    <button type="reset"
-      class="w-full sm:w-auto text-white justify-center inline-flex items-center bg-gray-500 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-700 dark:hover:bg-gray-800 dark:focus:ring-gray-600">
-      Limpiar
-    </button>
-  </div>
-</form>
+                            <div class="items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                                <button type="submit" id="guardarOrganizadorBtn"
+                                    class="w-full sm:w-auto text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                    Guardar Organizador
+                                </button>
+                                <button type="reset"
+                                    class="w-full sm:w-auto text-white justify-center inline-flex items-center bg-gray-500 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-700 dark:hover:bg-gray-800 dark:focus:ring-gray-600">
+                                    Limpiar
+                                </button>
+                            </div>
+                        </form>
 
 
 
