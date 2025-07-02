@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="../../resources/logo.png" />
+  <link rel="stylesheet" href="../../styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="cartelera.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EntradaYa</title>
+
+</head>
+
+<body class="min-h-screen">
+
+  <div class="flex min-h-screen">
+    <aside
+      class="flex flex-col w-64  px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
+      <div class="flex items-center justify-between">
+
+
+        <a href="#" class="flex items-center ml-4">
+          <img class="object-cover rounded-full h-8 w-8"
+            src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            alt="avatar" />
+          <span class="ml-2 font-medium text-gray-800 dark:text-gray-200">David Aldana</span>
+        </a>
+
+      </div>
+
+
+      <div class="relative mt-6">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+          <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+
+        </span>
+
+        <input type="text"
+          class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+          placeholder="Buscar eventos, categorías o ciudades" />
+      </div>
+
+      <div class="flex flex-col justify-between flex-1 mt-6">
+        <nav>
+          <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+            href="../user.html">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <span class="mx-4 font-medium">Inicio</span>
+          </a>
+
+          <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+            href="../profile.html">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <span class="mx-4 font-medium">Mi perfil</span>
+          </a>
+
+          <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+            href="../tickets.html">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 5V7M15 11V13M15 17V19M5 5C3.89543 5 3 5.89543 3 7V10C4.10457 10 5 10.8954 5 12C5 13.1046 4.10457 14 3 14V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V14C19.8954 14 19 13.1046 19 12C19 10.8954 19.8954 10 21 10V7C21 5.89543 20.1046 5 19 5H5Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <span class="mx-4 font-medium">Mis boletas</span>
+          </a>
+
+          <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+            href="../preferences.html">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.3246 4.31731C10.751 2.5609 13.249 2.5609 13.6754 4.31731C13.9508 5.45193 15.2507 5.99038 16.2478 5.38285C17.7913 4.44239 19.5576 6.2087 18.6172 7.75218C18.0096 8.74925 18.5481 10.0492 19.6827 10.3246C21.4391 10.751 21.4391 13.249 19.6827 13.6754C18.5481 13.9508 18.0096 15.2507 18.6172 16.2478C19.5576 17.7913 17.7913 19.5576 16.2478 18.6172C15.2507 18.0096 13.9508 18.5481 13.6754 19.6827C13.249 21.4391 10.751 21.4391 10.3246 19.6827C10.0492 18.5481 8.74926 18.0096 7.75219 18.6172C6.2087 19.5576 4.44239 17.7913 5.38285 16.2478C5.99038 15.2507 5.45193 13.9508 4.31731 13.6754C2.5609 13.249 2.5609 10.751 4.31731 10.3246C5.45193 10.0492 5.99037 8.74926 5.38285 7.75218C4.44239 6.2087 6.2087 4.44239 7.75219 5.38285C8.74926 5.99037 10.0492 5.45193 10.3246 4.31731Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <span class="mx-4 font-medium">Preferencias</span>
+          </a>
+
+          <hr class="my-6 border-gray-200 dark:border-gray-600" />
+
+
+
+          <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+            href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1" />
+            </svg>
+
+
+            <span class="mx-4 font-medium">Cerrar Sesion</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+
+    <div class="flex flex-col flex-1">
+
+
+
+
+
+
+      <nav class="bg-gray-900 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16 items-center">
+            <div class="flex items-center space-x-4">
+              <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="../../resources/Recurso 1.png" class="h-8" alt="Flowbite Logo" />
+              </a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <input type="text" placeholder="Buscar Eventos..."
+                class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600  dark:text-white  focus:ring-2 focus:ring-primary-400 transition-all">
+              <a href="carrito.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="../../resources/carrito.png" class="h-8" alt="Flowbite Logo" />
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+
+
+
+      <div class="bg-white">
+        <div class="pt-6">
+          <nav aria-label="Breadcrumb">
+            <ol role="list" class="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+              <li>
+                <div class="flex items-center">
+                  <a href="../user.html" class="mr-2 text-sm font-medium text-gray-900">Eventos</a>
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" aria-hidden="true"
+                    class="h-5 w-4 text-gray-300">
+                    <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+                  </svg>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <a href="cartelera.html" class="mr-2 text-sm font-medium text-gray-900">Conciertos</a>
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" aria-hidden="true"
+                    class="h-5 w-4 text-gray-300">
+                    <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+                  </svg>
+                </div>
+              </li>
+
+              <li class="text-sm">
+                <a href="#" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">Festival Sonido
+                  Vivo 2025</a>
+              </li>
+            </ol>
+          </nav>
+
+          <!-- Image gallery -->
+          <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
+            <img
+              src="../../resources/images/users/1 (1).jpg"
+              alt="Vista del escenario principal durante el concierto."
+              class="row-span-2 aspect-3/4 size-full rounded-lg object-cover max-lg:hidden" />
+            <img
+              src="../../resources/images/users/1 (2).jpg"
+              alt="Público disfrutando del evento."
+              class="col-start-2 aspect-3/2 size-full rounded-lg object-cover max-lg:hidden" />
+            <img
+              src="../../resources/images/users/1 (3).jpg"
+              alt="Artista en tarima durante su presentación."
+              class="col-start-2 row-start-2 aspect-3/2 size-full rounded-lg object-cover max-lg:hidden" />
+            <img
+              src="../../resources/images/users/1 (4).jpg"
+              alt="Iluminación del espectáculo en vivo."
+              class="row-span-2 aspect-4/5 size-full object-cover sm:rounded-lg lg:aspect-3/4" />
+          </div>
+
+          <!-- Product info -->
+          <div
+            class="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
+            <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+              <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Festival Sonido Vivo 2025</h1>
+            </div>
+
+            <!-- Options -->
+            <div class="mt-4 lg:row-span-3 lg:mt-0">
+              <h2 class="sr-only">Información del evento</h2>
+              <p class="text-3xl tracking-tight text-gray-900">$192 Por Asiento</p>
+
+              <!-- Reviews -->
+
+
+              <form class="mt-10">
+                <!-- Colors -->
+                <div>
+                  <h3 class="text-sm font-medium text-gray-900">Elije tu asiento</h3>
+
+                  <fieldset aria-label="Elige una zona" class="mt-4">
+                    <div class="flex items-center gap-x-3">
+                      <!-- Image gallery + selector de silla -->
+                      <div class="mx-auto mt-10 max-w-xs px-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-4 text-center">Elije tu asiento</h2>
+
+                        <!-- Imagen -->
+                        <div class="flex justify-center">
+                          <img src="../../resources/Estadio.png" alt="Público en el evento"
+                            class="w-full h-60 rounded-lg object-cover shadow" />
+                        </div>
+
+                        <!-- Selector de silla -->
+                        <div class="mt-4">
+                          <label for="silla" class="block text-sm font-medium text-gray-700 mb-1">Selecciona tu
+                            silla</label>
+                          <select id="silla" name="silla"
+                            class="mt-1 w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                            <option value="">-- E</option>
+                            <option value="E1">E1</option>
+                            <option value="E2">E2</option>
+                            <option value="E3">E3</option>
+                          </select>
+                        </div>
+
+                        <!-- Botón -->
+                        <div class="mt-6">
+                          <button type="submit"
+                            class="w-full rounded-md bg-blue-600 px-4 py-2 text-white font-medium hover:bg-blue-700 transition">Comprar
+                            entrada</button>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </fieldset>
+                </div>
+
+
+
+                
+              </form>
+            </div>
+
+            <div class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pr-8 lg:pb-16">
+              <!-- Description and details -->
+              <div>
+                <h3 class="sr-only">Descripción</h3>
+
+                <div class="space-y-6">
+                  <p class="text-base text-gray-900">El Festival Sonido Vivo 2025 te conecta con la mejor música en vivo
+                    del año. Disfruta artistas de renombre, zonas exclusivas y una experiencia inolvidable.</p>
+                </div>
+              </div>
+
+              <div class="mt-10">
+                <h3 class="text-sm font-medium text-gray-900">Destacados</h3>
+
+                <div class="mt-4">
+                  <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+                    <li class="text-gray-400"><span class="text-gray-600">Lineup internacional</span></li>
+                    <li class="text-gray-400"><span class="text-gray-600">Zonas VIP con beneficios exclusivos</span>
+                    </li>
+                    <li class="text-gray-400"><span class="text-gray-600">Experiencia segura y organizada</span></li>
+                    <li class="text-gray-400"><span class="text-gray-600">Ambiente vibrante y buena vibra</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-10">
+                <h2 class="text-sm font-medium text-gray-900">Detalles</h2>
+
+                <div class="mt-4 space-y-6">
+                  <p class="text-sm text-gray-600">Selecciona la zona y fecha que prefieras. Las entradas son limitadas,
+                    ¡asegura la tuya con anticipación y prepárate para vivir la música como nunca antes!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+  <footer class="bg-white rounded-lg shadow-sm dark:bg-gray-900 m-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+          <img src="../../resources/Recurso 1.png" class="h-8" alt="Flowbite Logo" />
+        </a>
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Acerca de</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Politica de privacidad</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Registrate</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Contactanos</a>
+          </li>
+        </ul>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href=""
+          class="hover:underline">EntradaYa</a>. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
