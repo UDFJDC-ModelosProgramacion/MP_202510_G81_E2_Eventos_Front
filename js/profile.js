@@ -1,35 +1,38 @@
-async function actualizarDatos() {
+async function actualizarDatos(event) {
+  event.preventDefault();
 
-    const assistantData = localStorage.getItem("assistant");
-    const id = assistant.id;
+  const stored = localStorage.getItem("loggedAssistant");
+  if (!stored) {
+    alert("No hay sesión iniciada");
+    return;
+  }
 
-  let asistente = {
-    name: document.getElementById("name").value.trim(),
-    lastName: document.getElementById("last-name").value.trim(),
-    email: document.getElementById("email").value.trim(),
-    password: document.getElementById("password").value.trim(),
-    numberPhone: document.getElementById("phone-number").value.trim(),
-    birthDate: document.getElementById("date-of-birth").value // formato: "YYYY-MM-DD"
+  const actual = JSON.parse(stored); // datos existentes del usuario
+  const updated = {
+    name: document.getElementById("name").value.trim() || actual.name,
+    lastName: document.getElementById("last-name").value.trim() || actual.lastName,
+    email: document.getElementById("email").value.trim() || actual.email,
+    password: document.getElementById("password").value.trim() || actual.password,
+    numberPhone: document.getElementById("phone-number").value.trim() || actual.numberPhone,
+    birthDate: document.getElementById("date-of-birth").value || actual.birthDate,
   };
 
   try {
-    const response = await fetch(`http://localhost:8080/api/assistants/${id}`, {
+    const response = await fetch(`http://localhost:8080/api/assistants/${actual.id}`, {
       method: "PUT",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(asistente)
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updated),
     });
 
     if (response.ok) {
-      const resultado = await response.json();
-      alert("Assistant updated successfully");
-      console.log(resultado);
+      const result = await response.json();
+      localStorage.setItem("loggedAssistant", JSON.stringify(result)); // actualiza localStorage
+      alert("Datos actualizados");
     } else {
       const error = await response.text();
-      alert("Error updating: " + error);
+      alert("Error al actualizar: " + error);
     }
   } catch (error) {
-    console.error("Request error:", error);
+    console.error("Error en la petición:", error);
   }
 }

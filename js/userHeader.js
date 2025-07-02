@@ -14,4 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('No se encontró el elemento para mostrar el nombre de usuario');
     }
+    const welcomeHeading = document.querySelector('h1.text-4xl');
+  if (welcomeHeading) {
+    welcomeHeading.textContent = `Bienvenido ${loggedAssistant.name} ${loggedAssistant.lastName}`;
+  }
 });
